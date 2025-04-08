@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h2>All Orders</h2>
+  <table border="1" id="ordersTable">
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Address</th><th>Shoe</th><th>Qty</th><th>Time</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    fetch('/api/orders')
+      .then(res => res.json())
+      .then(data => {
+        const table = document.getElementById('ordersTable').getElementsByTagName('tbody')[0];
+        data.forEach(order => {
+          const row = table.insertRow();
+          row.innerHTML = `
+            <td>${order.id}</td>
+            <td>${order.customer_name}</td>
+            <td>${order.address}</td>
+            <td>${order.shoe_name}</td>
+            <td>${order.quantity}</td>
+            <td>${order.order_time}</td>`;
+        });
+      });
+  </script>
+</body>
+</html>

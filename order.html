@@ -1,0 +1,28 @@
+<form id="orderForm">
+    <input type="text" name="customer_name" placeholder="Customer Name" required>
+    <input type="text" name="shoe_model" placeholder="Shoe Model" required>
+    <input type="number" name="size" placeholder="Size" required>
+    <input type="number" name="quantity" placeholder="Quantity" required>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <script>
+  document.getElementById('orderForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+  
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+  
+    const response = await fetch('/api/place-order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+  
+    const result = await response.text();
+    alert(result);
+  });
+  </script>
+  

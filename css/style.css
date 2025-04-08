@@ -1,0 +1,621 @@
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #655858; /* black background outside content */
+    color: #111;
+  }
+  
+  .landing-wrapper {
+    background-color: #e6e6e6; /* light gray wrapper */
+    padding: 40px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  .nav-left .dropdown::after,
+  .nav-right .icon::after {
+    content: '';
+  }
+  
+  .nav-left .dropdown {
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  
+  /* Cart badge */
+  .cart-icon {
+    position: relative;
+  }
+
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 160px;
+    background-color: white;
+  }
+
+.dropdown-content a{
+  padding: 10px 16px;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover{
+  background-color: #f1f1f1;
+}
+  
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+
+
+.icon-btn {
+  background-color: #f0f0f000;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-container input[type="text"] {
+  padding: 2px 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccccccce;
+}
+
+
+
+  
+  .cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: orange;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 7px;
+    border-radius: 50%;
+  }
+  
+  /* Heading section */
+  .hero-heading {
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .hero-heading {
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center (if you want full height centering) */
+    text-align: center;        /* centers text inside the h1 */
+    height: 100%;              /* optional: only if you want vertical centering too */
+    margin-top: 60px;
+  }
+  
+  .hero-heading h1 {
+    font-size: 11rem;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  
+  
+  .hero-heading h1 span {
+    color: #4e7eff;
+  }
+  
+
+  .product-highlight {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  
+  .product-card {
+    position: relative;
+    background-color: #f3f3f1;
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 90%;
+    max-width: 1000px;
+  }
+  
+  .product-card img.main-shoe {
+    width: 100%;
+    height: 600px; /* adjust as needed */
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+  .badge {
+    position: absolute;
+    top: 20%;
+    left: -70px;
+    transform: rotate(-90deg) translateY(-50%);
+    background: #111;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    font-size: rem;
+    font-weight: bold;
+    border-radius: 0.3rem 0.3rem 0 0;
+    z-index: 2;
+}
+  
+  .product-info {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: white;
+    z-index: 3;
+    max-width: 300px;
+  }
+  
+  .product-info h2 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  
+  .product-info p {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+  
+  .shop-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: #3d4df3;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  
+  .shoe-thumbs {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 3;
+  }
+  
+  .shoe-thumbs img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 2px solid white;
+  }
+  
+
+ /* ===================== New Drops Section ===================== */
+ .new-drops-section {
+    background: #e6e6e6;
+    padding: 60px 40px;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+  .new-drops-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .new-drops-section h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #121212;
+    line-height: 1.2;
+  }
+  
+  .shop-new-btn {
+    background: #3f66fd;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  
+  .product-card-new {
+    background: #f4f4f4;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .product-card-new:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card-new img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .new-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #3f66fd;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .product-card-new h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  .view-btn {
+    background: #121212;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .view-btn span {
+    color: #f4c050;
+  }
+   
+
+  /* ===================== Categories Section ===================== */
+.category-section {
+    background: #121212;
+    padding: 60px 40px;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+  }
+  
+  .category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .category-header h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+  
+  .slider-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .slider-btn {
+    background: #e0e0e0;
+    color: #121212;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .category-card {
+    background: #f2f4f6;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .category-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .category-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .category-info h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #121212;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .arrow-btn {
+    background: #121212;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  
+/* ================= REVIEWS SECTION ================= */
+.reviews-section {
+    background-color: #f6f6f6;
+    padding: 60px 40px;
+  }
+  
+  .reviews-section h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #1a1a1a;
+  }
+  
+  .review-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .review-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .review-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .review-header div {
+    max-width: 75%;
+  }
+  
+  .review-header strong {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .review-header p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 6px 0;
+  }
+  
+  .review-header span {
+    font-size: 0.9rem;
+    color: #ffbf00;
+  }
+  
+  .review-profile {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+    border: 2px solid #eee;
+  }
+  
+  
+  .review-card img:last-child {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top: 1px solid #eee;
+  }
+  
+  /* SEE ALL Button */
+  .see-all {
+    display: block;
+    margin: 40px auto 0;
+    background: #4a6cf7;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-align: center;
+    width: fit-content;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .see-all:hover {
+    background: #2f54d6;
+  }
+  
+  
+  /* ================= NEWSLETTER SECTION ================= */
+  .newsletter {
+    background: #4a6cf7;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 24px 24px 0 0;
+  }
+  
+  .newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .newsletter h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    width: 200px;
+  }
+  
+  .newsletter-form button {
+    padding: 10px 16px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .kicks-logo {
+    width: 100px;
+    margin-top: 20px;
+  }
+  
+  /* ================= FOOTER ================= */
+  .footer {
+    background: #121212;
+    color: white;
+    padding: 60px 40px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .about {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 6px;
+    color: #ccc;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .footer-bottom a {
+    color: #4a6cf7;
+    text-decoration: none;
+  }
+  
