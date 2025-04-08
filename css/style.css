@@ -10,7 +10,8 @@
     background-color: #655858; /* black background outside content */
     color: #111;
   }
-  
+
+
   .landing-wrapper {
     background-color: #e6e6e6; /* light gray wrapper */
     padding: 40px;
@@ -619,3 +620,89 @@
     text-decoration: none;
   }
   
+
+
+
+
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 768px) {
+
+  .landing-wrapper {
+    padding: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  .nav-left, .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hero-heading h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .product-card img.main-shoe {
+    height: auto;
+  }
+
+  .product-info {
+    position: static;
+    color: #111;
+    margin-top: 1rem;
+  }
+
+  .shoe-thumbs {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .shoe-thumbs img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .section-header,
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .product-grid,
+  .review-cards,
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-new,
+  .review-card,
+  .category-card {
+    padding: 15px;
+  }
+
+  .badge {
+    left: 10px;
+    top: 10px;
+    transform: none;
+    rotate: 0deg;
+  }
+
+  .product-highlight {
+    flex-direction: column;
+  }
+
+  .search-container input[type="text"] {
+    width: 100%;
+  }
+}
